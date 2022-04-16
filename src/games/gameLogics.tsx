@@ -3,7 +3,9 @@ import React, { useEffect } from "react";
 import { useState } from "react"
 
 
-const randomNumber = Math.floor((Math.random() * 3) + 1);
+function randomGenerator(){
+   return Math.floor((Math.random() * 3) + 1);
+}
 
 export const FirstGamePlay = (props: { state: any }) => {
     const state = props.state
@@ -43,65 +45,23 @@ export const FirstGamePlay = (props: { state: any }) => {
 export const SelectedPiece = (   props: { count: any; state: any } ) => { 
     
     const count = props.count,
+    randomNumber = randomGenerator,
     state = props.state,
     circlehold = `circle-holder-${state[0]}`,
     img = `images-${state[0]}`,
     [info, setinfo] = useState('');
     const [display, setDisplay] = useState(false),
-    houseCircleHolder = `circle-holder-${randomNumber}`,
-    houseImage = `images-${randomNumber}`,
-    player = useState(''),
-    game = useState('');
+    houseCircleHolder = `circle-holder-${randomNumber()}`,
+    houseImage = `images-${randomNumber()}`;
 
-    function assignValues (){
-        switch (state[0]) {
-            case 1:
-                player[1]('paper')
-                break;
-            case 2: 
-                player[1]('scissors')
-                break;
-            case 3:
-                player[1]('rock')
-                break;
-            default:
-                console.log('value empty')
-                break;
-        }
-    
-        switch (randomNumber) {
-            case 1:
-                game[1]('paper')
-                break;
-            case 2: 
-                game[1]('scissors')
-                break;
-            case 3:
-                game[1]('rock')
-                break;
-            default:
-                console.log('value empt')
-                break;
-        }
-    }
-useEffect(() => {
-   assignValues()
-}, [])
 useEffect(() =>{
-    if((game[0] === "scissors" && player[0] === "paper")
-                || (game[0] === "rock" && player[0] === "scissors") 
-                || (game[0] === "paper" && player[0] === "rock") ){
-                    
+    if( (state[0] ===3 && randomNumber() === 1) || (state[0] === 1 && randomNumber() === 2) || (state[0] === 2 && randomNumber() === 3)  ){
                     setinfo('you lose')
-                    count[1](count[0]-1)  
-
-    }else if (( player[0]  === "scissors" && game[0] === "paper") 
-                || (player[0] === "rock" && game[0] === "scissors") 
-                || (player[0] === "paper" && game[0] === "rock") ) {
-                
+                    count[1](count[0]--)
+    }else if ( (state[0] === 1 && randomNumber() === 3) || (state[0] === 2 && randomNumber() === 1) || (state[0] === 3 && randomNumber() === 2)  ) {
                     setinfo('you win')
-                    count[1](count[0]+1)
-    }else if(game[0] === player[0]){
+                    count[1](count[0]--)
+    }else if(state[0] === randomNumber){
         setinfo(' a draw')    
     }
     else {
@@ -109,7 +69,6 @@ useEffect(() =>{
 }
 
   setDisplay(true)
-  console.log(houseImage)
 },[])  
 
 function refactor() {
@@ -132,7 +91,7 @@ function refactor() {
             </div>
             {
                 display ? 
-                    <div className="game-pick">{console.log(houseImage)}
+                    <div className="game-pick">
                         <h1 className="picked"> the house picked</h1>
                         <div className='image-holder'>
                             <div className={houseCircleHolder}>
