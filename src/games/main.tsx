@@ -30,8 +30,7 @@ const Header = ( props: { count: boolean | ReactChild | ReactFragment | ReactPor
 export const MainPage = () => {
     const state  = useState(0),
     counter = useState(0)
-
-    // useEffect(() =>{}, [state] )
+    
     return(
         <div className="main-body">
             <Header count={counter[0]}/>

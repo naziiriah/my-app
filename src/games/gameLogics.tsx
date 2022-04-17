@@ -70,9 +70,11 @@ useEffect(() =>{
             setinfo('there is no match')
 }
 
-  setDisplay(true)
+  
 },[])  
-
+setTimeout(() => {
+    setDisplay(true)
+}, 1000)
 function refactor() {
     const PrevCount = localStorage.getItem('count')
     localStorage.setItem('count', `${count[0] + Number(PrevCount)}`)
@@ -84,8 +86,7 @@ function refactor() {
          <div className="selected">
             <div className='your-pick'>
                     <h1 className="picked"> you picked</h1>
-                    <div className='i
-                    mage-holder'>
+                    <div className='image-holder'>
                         <div className={circlehold}>
                             <div className={img} >
                             </div>
@@ -100,19 +101,20 @@ function refactor() {
                             <div className={houseCircleHolder}>
                                 <div className={houseImage}></div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 : <></>
             }
         </div>
 
         <div className="info-text">
-            {info}
+            {display && info}
         </div>
         { display && 
-            <button className="play-again" onClick={() => refactor()}>play again</button>}
+            <button className="play-again" 
+            onClick={() => refactor()}
+            >play again</button>
+        }
     </> 
         )
 }
-
-
