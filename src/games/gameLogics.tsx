@@ -56,15 +56,15 @@ useEffect(() =>{
     if( (state[0] ===3 && randomNumber === 1) 
         || (state[0] === 1 && randomNumber === 2) 
         || (state[0] === 2 && randomNumber === 3) ){
-            setinfo('you lose')
+            setinfo('you lose!!!')
             count[1](count[0]--)
     }else if ( (state[0] === 1 && randomNumber === 3) 
         || (state[0] === 2 && randomNumber === 1) 
         || (state[0] === 3 && randomNumber === 2)  ) {
-                setinfo('you win')
+                setinfo('you win!!!!')
                 count[1](count[0]++)
     }else if(state[0] === randomNumber){
-        setinfo(' a draw')    
+        setinfo(' a draw!')    
     }
     else {
             setinfo('there is no match')
@@ -75,6 +75,8 @@ useEffect(() =>{
 setTimeout(() => {
     setDisplay(true)
 }, 1000)
+
+
 function refactor() {
     const PrevCount = localStorage.getItem('count')
     localStorage.setItem('count', `${count[0] + Number(PrevCount)}`)
@@ -86,7 +88,7 @@ function refactor() {
          <div className="selected">
             <div className='your-pick'>
                     <h1 className="picked"> you picked</h1>
-                    <div className='image-holder'>
+                    <div className='image-holder-container'>
                         <div className={circlehold}>
                             <div className={img} >
                             </div>
@@ -97,7 +99,7 @@ function refactor() {
                 display ? 
                     <div className="game-pick">
                         <h1 className="picked"> the house picked</h1>
-                        <div className='image-holder'>
+                        <div className='image-holder-container'>
                             <div className={houseCircleHolder}>
                                 <div className={houseImage}></div>
                             </div>
