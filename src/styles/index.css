@@ -1,3 +1,12 @@
+@media only screen and (max-width: 450px) {
+  .main-body {
+    width: 1rem;
+    height: 52rem;
+    background-color: black;
+    margin: auto;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -316,5 +325,283 @@
   font-weight: 600;
   text-align: center;
   margin-left: 45%;
+}
+
+@media only screen and (max-width: 450px) {
+  .main-body {
+    width: 100%;
+    height: 900px;
+    margin: auto;
+  }
+  .first-phase {
+    width: 100%;
+    height: 100%;
+  }
+  .first-phase .image-holder {
+    background-image: url("../images/bg-triangle.svg");
+    height: 14rem;
+    width: 14rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: -10px;
+    position: relative;
+    top: 4rem;
+  }
+  .first-phase .images {
+    height: 5rem;
+    width: 5rem;
+    border: solid rgba(0, 0, 0, 0) 20px;
+    border-radius: 50%;
+    position: relative;
+    top: -17rem;
+    left: 1rem;
+  }
+  .first-phase .images:hover {
+    border: solid rgba(0, 0, 0, 0.212) 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .first-phase .circle-holder-scissors {
+    width: 6.6rem;
+    height: 6.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid #ec9e0e 10px;
+    margin: auto;
+  }
+  .first-phase .circle-holder-paper {
+    width: 6.6rem;
+    height: 6.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid #4865f4 10px;
+    margin: auto;
+  }
+  .first-phase .circle-holder-rock {
+    width: 6.6rem;
+    height: 6.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid #dc2e4e 10px;
+    margin: auto;
+  }
+  .first-phase .paper-image-holder {
+    background-image: url("../images/icon-paper.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .images-scissors {
+    height: 5rem;
+    width: 5rem;
+    border: solid rgba(0, 0, 0, 0) 20px;
+    border-radius: 50%;
+    position: relative;
+    top: -13rem;
+    left: 7rem;
+  }
+  .images-scissors:hover {
+    border: solid rgba(0, 0, 0, 0.212) 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .scissors-image-holder {
+    background-image: url("../images/icon-scissors.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .images-rock {
+    height: 5rem;
+    width: 5rem;
+    border: solid rgba(0, 0, 0, 0) 20px;
+    border-radius: 50%;
+    position: relative;
+    top: -32rem;
+    left: 13rem;
+  }
+  .images-rock:hover {
+    border: solid rgba(0, 0, 0, 0.212) 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .rock-image-holder {
+    background-image: url("../images/icon-rock.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .selected {
+    width: 100%;
+    height: 30rem;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 3rem;
+  }
+  .selected .your-pick {
+    width: 45%;
+    height: 90%;
+    margin-top: 10%;
+    margin-left: -1rem;
+  }
+  .selected .game-pick {
+    width: 45%;
+    height: 100%;
+    margin-top: 10%;
+    margin-left: -1rem;
+  }
+  .picked {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .info-text {
+    text-transform: uppercase;
+    word-spacing: 10px;
+    text-align: center;
+  }
+  .play-again {
+    height: 4rem;
+    width: 13rem;
+    color: #1f3756;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 7rem;
+    margin-top: 5px;
+  }
+  .top-head {
+    padding-top: 50px;
+  }
+  .header {
+    width: 90%;
+    height: 10rem;
+    margin: auto;
+    border-radius: 13px;
+    border: solid #606e85 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header nav {
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  .header nav h1 {
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .header .counter {
+    width: 10rem;
+    height: 8rem;
+    background-color: #fff;
+    margin-right: 20px;
+    margin-top: 13px;
+    border-radius: 5px;
+  }
+  .header .counter h3 {
+    text-align: center;
+    color: #2a46c0;
+    text-transform: uppercase;
+    padding-top: 8px;
+    font-size: 20px;
+  }
+  .header .counter h1 {
+    font-size: 55px;
+    text-align: center;
+    padding-top: 8px;
+    font-weight: 600;
+  }
+  .circle-holder-1 {
+    width: 6.6rem;
+    height: 6.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid #4865f4 10px;
+    margin: start;
+  }
+  .circle-holder-2 {
+    width: 6.6rem;
+    height: 6.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid #ec9e0e 10px;
+    margin: start;
+    margin-left: -3rem;
+  }
+  .circle-holder-3 {
+    width: 6.6rem;
+    height: 6.6rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid #dc2e4e 10px;
+    margin: auto;
+  }
+  .images-1 {
+    background-image: url("../images/icon-paper.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    margin: auto;
+    margin-top: 2.3rem;
+  }
+  .images-2 {
+    background-image: url("../images/icon-scissors.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    margin: start;
+    margin-top: 2.3rem;
+  }
+  .images-3 {
+    background-image: url("../images/icon-rock.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    margin: auto;
+    margin-top: 2.3rem;
+  }
+  .image-holder-container {
+    height: 14rem;
+    width: 14rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: -10px;
+    position: relative;
+    top: 4rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

@@ -2,7 +2,7 @@ import {  ReactChild, ReactFragment, ReactPortal, useState } from "react"
 import { FirstGamePlay, SelectedPiece } from "./gameLogics"
 
 const Header = ( props: { count: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined }) => {
-
+    const PrevCount = localStorage.getItem('count')
 
     return(
         <header className="top-head">
@@ -15,7 +15,7 @@ const Header = ( props: { count: boolean | ReactChild | ReactFragment | ReactPor
 
                 <div className="counter">
                     <h3>score</h3>
-                    <h1>{props.count}</h1>        
+                    <h1>{PrevCount}</h1>        
                 </div>
             </div>
         </header>
@@ -30,9 +30,7 @@ const Header = ( props: { count: boolean | ReactChild | ReactFragment | ReactPor
 export const MainPage = () => {
     const state  = useState(0),
     counter = useState(0)
-    localStorage.setItem("count", "0")
-
-    // useEffect(() =>{}, [state] )
+    
     return(
         <div className="main-body">
             <Header count={counter[0]}/>
